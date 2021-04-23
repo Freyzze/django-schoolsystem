@@ -1,0 +1,133 @@
+/* student details */
+.pricingTable{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    text-align: center;
+    padding: 0 0 10px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.pricingTable .pricingTable-header{
+    color: #fff;
+    background-color: #308FBB;
+    padding: 25px 10px 45px;
+    border-bottom: 10px solid #fff;
+    box-shadow: 0 0 0 15px #69AAD4;
+}
+.pricingTable .title{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+.pricingTable .price-value{
+    background-color: #5CAFE3;
+    line-height: 110px;
+    height: 170px;
+    width: 170px;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transform: translateY(-40px);
+    position: relative;
+}
+.pricingTable .price-value:before{
+    content: '';
+    height: 85%;
+    width: 85%;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    transform:translateY(-50%) translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.pricingTable .price-value .amount{
+    color: #308FBB;
+    background-color: #fff;
+    font-size: 38px;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 5px 2px 0 3px rgba(0,0,0,0.3);
+    display: block;
+}
+.pricingTable .time{
+    color: #202020;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: -25px 0 15px;
+    display: block;
+}
+.pricingTable .pricing-content{
+    color: #222;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    padding: 0;
+    margin: 0 0 10px;
+    list-style: none;
+}
+.pricingTable .pricing-content li:nth-child(odd){ background-color: #E7EEF4; }
+.pricingTable .pricingTable-signup a{
+    color: #fff;
+    background-color: #5DAEE3;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    border: 2px solid #5DAEE3;
+    border-radius: 10px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.pricingTable .pricingTable-signup a:hover{ color: #5DAEE3; text-decoration: none;}
+.pricingTable .pricingTable-signup a:before{
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0) rotate(-60deg) translateX(-30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.pricingTable .pricingTable-signup .sdbtn:hover:before{
+    opacity: 1;
+    transform: scale(1) rotate(0) translateX(0);
+}
+.pricingTable.green .pricingTable-header{
+    background-color: #A4B437;
+    box-shadow: 0 0 0 15px #B7D43E;
+}
+.pricingTable.green .price-value{ background-color: #B6D339; }
+.pricingTable.green .price-value .amount{ color: #A4B437; }
+.pricingTable.green .pricing-content li:nth-child(odd){ background-color: #F1F5DE; }
+.pricingTable.green .pricingTable-signup .sdbtn{
+    background-color: #B6D53A;
+    border-color: #B6D53A;
+}
+.pricingTable.green .pricingTable-signup .sdbtn:hover{ color: #B6D53A; }
+.pricingTable.orange .pricingTable-header{
+    background-color: #F38A46;
+    box-shadow: 0 0 0 15px #F7A245;
+}
+.pricingTable.orange .price-value{ background-color: #F5A448; }
+.pricingTable.orange .price-value .amount{ color: #F38A46; }
+.pricingTable.orange .pricing-content li:nth-child(odd){ background-color: #FEECD8; }
+.pricingTable.orange .pricingTable-signup .sdbtn{
+    background-color: #F28B48;
+    border-color: #F28B48;
+}
+.pricingTable.orange .pricingTable-signup .sdbtn:hover{ color: #F28B48; }
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin: 0 0 40px; }
+}
