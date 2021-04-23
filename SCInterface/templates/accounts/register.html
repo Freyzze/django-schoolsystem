@@ -1,0 +1,80 @@
+{% extends "layouts/log-Screen.html" %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %} 
+
+
+	<div  align="center" style="background-color:rgb(84, 105, 105); opacity: 0.9; margin-left: 500px; margin-right: 500px; border-radius: 20px 80px 20px 80px;" >
+		<div style="margin-top: 100px; "></div>
+							
+								<h4 > 
+									<h4>
+										REGISTER
+									</h4>
+								</h4>
+							
+							<span >
+								{% if msg %}
+									{{ msg | safe }}
+								{% else %}
+									Add your credentials
+								{% endif %} 
+							</span>
+					
+							<p> <br /> </p>		
+						
+						
+							{% if not success %}
+								<form role="form" method="post" action="">
+
+									{% csrf_token %}  
+															
+									<div >
+										
+										{{ form.username }}
+									</div><br><br>
+									<span >{{ form.username.errors }}</span>
+
+									<div class="input-group" >
+										
+										{{ form.email }}
+									</div><br><br>
+									<span>{{ form.email.errors }}</span>
+
+									<div class="input-group" >
+										
+										{{ form.password1 }}
+									</div><br><br>
+									<span >{{ form.password1.errors }}</span>
+
+									<div class="input-group">
+										
+										{{ form.password2 }}
+									</div><br><br>
+									<span >{{ form.password2.errors }}</span>
+									
+									
+									<button type="submit" name="Signup" >Register</button>
+								
+								</form>
+
+								<p >Have an account? <a href="{% url 'login' %}" >Login</a></p>
+							{% endif %}
+		
+						
+		</div>
+
+
+				
+	</div>
+
+
+{% endblock content %}
+
+
+{% block javascripts %}
+
+
+
+{% endblock javascripts %} 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        SchoolMs - {% block title %}{% endblock %} 
+    </title> 
+
+
+    <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="robots" content="all,follow">
+  
+
+   <!-- style tags list-->
+   <link rel="stylesheet" href="static/assets/vendor/bootstrap/css/bootstrap.min.css">
+   <!-- Font Awesome CSS-->
+   <link rel="stylesheet" href="static/assets/vendor/font-awesome/css/font-awesome.min.css">
+   <!-- Fontastic Custom icon font-->
+   <link rel="stylesheet" href="static/assets/css/fontastic.css">
+  
+   <!-- theme stylesheet-->
+   <link rel="stylesheet" href="static/assets/css/style.default.css" id="theme-stylesheet">
+   <!-- Custom stylesheet - for your changes-->
+   <link rel="stylesheet" href="static/assets/css/style.css">
+
+
+
+
+
+    {% block stylesheets %}{% endblock stylesheets %}    
+
+</head>
+<body class="">
+
+
+ 
+    {% block content %}{% endblock content %}
+  
+
+    {% include 'includes/scripts.html' %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+        SchoolMs - {% block title %}{% endblock %}
+    </title>   
+    
+    <link rel="stylesheet" href="stactic/assets/style.css">
+    <link rel="icon" href="/static/assets/images" type="image">
+
+    <!-- Favicon-->
+
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body style="background-image: url(/static/images/GT.jpg);" >
+
+    <div>
+        {% block content %}{% endblock content %}
+    </div>
+
+    {% include 'includes/scripts.html' %}
+
+    {% block javascripts %}{% endblock javascripts %} 
+
+</body>
+</html>
